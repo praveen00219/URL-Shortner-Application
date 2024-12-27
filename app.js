@@ -59,7 +59,7 @@ app.post("/shorten", (req, res) => {
     const found = jsonData.find((item) => item.long === userURL);
 
     if (found) {
-      const newShortURL = `https://url-shortner-api-qaut.onrender.com/${found.short}`;
+      const newShortURL = `https://url-shortner-application-kds1.onrender.com/${found.short}`;
       return res.render("index", { newURL: newShortURL });
     }
 
@@ -69,7 +69,7 @@ app.post("/shorten", (req, res) => {
 
     // Write the new mapping to the file
     writeFileSync(FILE_PATH, JSON.stringify(newData));
-    const newShortURL = `https://url-shortner-api-qaut.onrender.com/${rndString}`;
+    const newShortURL = `https://url-shortner-application-kds1.onrender.com/${rndString}`;
     res.render("index", { newURL: newShortURL });
   } catch (error) {
     console.error("Error:", error);
