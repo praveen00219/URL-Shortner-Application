@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortner</title>
+  </head>
+  <body>
+    <h1>URL Shortner</h1>
+    <form action="/shorten" method="post">
+      <label for="url">Enter a long URL:</label>
+      <input type="text" name="url" />
+      <input type="submit" value="Shorten URL" />
+    </form>
+    <p><%= newURL %></p>
+  </body>
+</html>
